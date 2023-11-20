@@ -18,7 +18,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Gaussian Processes for Real-World Data">
 <meta property="og:title" content="  Framework">
-<meta property="og:url" content="http://localhost:4000/framework/">
+<meta property="og:url" content="http://localhost:4000/framework/5_scaling_sctructures/">
 
 
 
@@ -36,7 +36,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/framework/">
+<link rel="canonical" href="http://localhost:4000/framework/5_scaling_sctructures/">
 
 
 
@@ -287,9 +287,23 @@
     
     <h1 id="page-title" class="page__title">4. Framework</h1>
     
-    <p align="center">
-  <img src="../images/framework.png" width="300" />
-</p>
+    <h2 id="step-5-scaling-structures">Step 5: Scaling structures</h2>
+
+<p>When working with a large dataset, the modeller should also analyse the training data to find structure that may lead to the application of scaling methods. Three cases and how to identify them are discussed below.</p>
+
+<ul>
+  <li><strong>Case 1</strong>: Oversampled functions. An oversampled function is sampled more frequently than is required to capture its underlying structure and variation. In the case of a periodic function this would be more than the Nyquist frequency. In this situation, the modeller can use sparse GP regression with variational inference of inducing points (<a href="https://proceedings.mlr.press/v5/titsias09a.html">Titsias, 2009</a>). Many GP libraries, such <a href="https://gpflow.org"><code class="language-plaintext highlighter-rouge">GPflow</code></a> or <a href="https://gpytorch.ai"><code class="language-plaintext highlighter-rouge">GPyTorch</code></a>, offer built-in functions to perform this approximation.</li>
+  <li><strong>Case 2</strong>: Timeseries data. For timeseries data, the GP can be mapped to a Stochastic Differential Equation (SDE) (<a href="https://ieeexplore.ieee.org/document/5589113">Hartikainen, 2010</a>). This approximation has a linear cost in the number of time points and works well in many situations. However the mapping between the covariance matrix and the SDE can be expensive, sometimes more expensive than solving SDE itself. <a href="https://github.com/JuliaGaussianProcesses/TemporalGPs.jl"><code class="language-plaintext highlighter-rouge">TemporalGPs.jl</code></a>, a package Julia, provides a framework to apply this method.</li>
+  <li>
+    <p><strong>Case 3</strong>: Kronecker product structure. For such dataset with the following kernel structure, such as gridded data:</p>
+
+\[\text{Cov}\biggl(\begin{bmatrix} x_1 \\ x_2  \end{bmatrix} \begin{bmatrix} x_1^{\prime} \\ x_2^{\prime}\end{bmatrix} \biggl)=\text{Cov}(x_1,x_1^{\prime} )\otimes \text{Cov}(x_2,x_2^{\prime}),\]
+
+    <p>the Kronecker identity can be used to invert the matrices in a piecewise fashion (<a href="https://mlg.eng.cam.ac.uk/pub/pdf/Saa11.pdf">Saatcci et al., 2012</a>). This trick is used in the Structured Kernel interpolation (SKI) (<a href="https://proceedings.mlr.press/v37/wilson15.html">Wilson and Nickish, 2015</a>). Both SKI and SKIP are implementable in <a href="https://gpytorch.ai"><code class="language-plaintext highlighter-rouge">GPyTorch</code></a>.</p>
+  </li>
+</ul>
+
+<p>If no structure is apparent, a baseline that is hard to beat is to the divide the data into smaller datasets, as previously mentioned. This can be done naively by separating data chronologically or into tiles. However, it can be useful to make use of clustering algorithms, such as k-means or k-nearest neighbours, to group features that exhibit similar properties.</p>
 
   </div>
 </div>

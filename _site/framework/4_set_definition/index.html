@@ -18,7 +18,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Gaussian Processes for Real-World Data">
 <meta property="og:title" content="  Framework">
-<meta property="og:url" content="http://localhost:4000/framework/">
+<meta property="og:url" content="http://localhost:4000/framework/4_set_definition/">
 
 
 
@@ -36,7 +36,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/framework/">
+<link rel="canonical" href="http://localhost:4000/framework/4_set_definition/">
 
 
 
@@ -232,7 +232,7 @@
           
             <li><a href="/framework/3_domain_knowledge/">Step 3: Domain knowledge</a></li>
           
-            <li><a href="/framework/4_set_definition/">Step 4: Set definition</a></li>
+            <li><a href="/framework/4_set_definition/" class="active">Step 4: Set definition</a></li>
           
             <li><a href="/framework/5_scaling_structure/">Step 5: Scaling structure</a></li>
           
@@ -287,9 +287,9 @@
     
     <h1 id="page-title" class="page__title">4. Framework</h1>
     
-    <p align="center">
-  <img src="../images/framework.png" width="300" />
-</p>
+    <h2 id="step-4-training-validation-and-test-set-definition">Step 4: Training, validation and test set definition</h2>
+
+<p>A held out dataset allows the modeller to check whether they are under or overfitting, and to give some indication of the performance they would get on `real’ unseen data. The separation of the data should reflect the goals and the performance they want to measure in Step 1, and information from Step 3. Ideally the dataset should be separated into three groups: a training set, a validation set, and a test set which will not be iterated over. In many cases, the data is used in real-world is not i.i.d., it is dependent and  correlated, and come from heterogeneous sources and samplings regimes. If the effective number of data points (the number of independent samples that would be needed to produce the same information content as the given sample) is fairly small, then a cross-validation scheme is strongly recommended to assess the stability and predictability of the model (<a href="https://arxiv.org/abs/1901.08152">Yu and Kumbier, 2020</a>).</p>
 
   </div>
 </div>

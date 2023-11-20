@@ -18,7 +18,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Gaussian Processes for Real-World Data">
 <meta property="og:title" content="  Framework">
-<meta property="og:url" content="http://localhost:4000/framework/">
+<meta property="og:url" content="http://localhost:4000/framework/8_model_iteration/">
 
 
 
@@ -36,7 +36,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/framework/">
+<link rel="canonical" href="http://localhost:4000/framework/8_model_iteration/">
 
 
 
@@ -240,7 +240,7 @@
           
             <li><a href="/framework/7_kernel_design/">Step 7: Kernel design</a></li>
           
-            <li><a href="/framework/8_model_iteration/">Step 8: Model iteration</a></li>
+            <li><a href="/framework/8_model_iteration/" class="active">Step 8: Model iteration</a></li>
           
             <li><a href="/framework/9_scaling/">Step 9: Scaling</a></li>
           
@@ -287,9 +287,13 @@
     
     <h1 id="page-title" class="page__title">4. Framework</h1>
     
-    <p align="center">
-  <img src="../images/framework.png" width="300" />
-</p>
+    <h2 id="step-8-model-iteration">Step 8: Model iteration</h2>
+
+<p>The modeller should start by setting up some simple non-GP baseline such as k-NN or linear regression. They should then build the kernel iteratively, trying the most important dimensions first and check the physical consistency of the samples, the structure of residuals, the posterior predictive likelihood scores such as the marginal log likelihood, the mean log loss and Bayesian Information Criterion. The bias, Root Mean Square Error (RMSE) and Mean Absolute Error should also be evaluated. The checks should be repeated at for each iteration on both the training and validation sets. The modeller should keep iterating, until the scores start to stagnate or signs of overfitting are observed. If they are using using the GP for interpolation, this can simply be done by comparing the metrics such as RMSE and log-likelihood for the training and validation sets. However if extrapolation is the goal, it is normal for the model to perform worse away from the training distribution. In this case, it is useful to look at the GP samples. Are they sensible for both the training and validation sets?</p>
+
+<p>GP samples can also be used as `synthetic data’ to check the validity of the model and training procedure. The synthetic data is generated from the model samples. This fake data is similar to real data, but where ground truth parameter values are known. The samples can be fit using another GP. If the specified model is doing a good job, the modeller should be able to recover the original covariance matrix of the training data. If the results of these tests are unsatisfactory, return to Step 6 and try a new transformation design or set of constraints.</p>
+
+<p>If after performing Steps 6 to 8, there is no significant improvement, more involved ‘research grade’ GP methods such as a Deep Gaussian Process (<a href="https://proceedings.mlr.press/v31/damianou13a.html">Damianou and Lawrence, 2013</a>) or a Gaussian Process Latent Variable Model (<a href="https://proceedings.mlr.press/v9/titsias10a">Titsias and Lawrence, 2010</a>) may be more suitable for the problem.</p>
 
   </div>
 </div>

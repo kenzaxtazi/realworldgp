@@ -18,7 +18,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Gaussian Processes for Real-World Data">
 <meta property="og:title" content="  Framework">
-<meta property="og:url" content="http://localhost:4000/framework/">
+<meta property="og:url" content="http://localhost:4000/framework/1_problem_definition/">
 
 
 
@@ -36,7 +36,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/framework/">
+<link rel="canonical" href="http://localhost:4000/framework/1_problem_definition/">
 
 
 
@@ -226,7 +226,7 @@
         
         <ul>
           
-            <li><a href="/framework/1_problem_definition/">Step 1: Problem definition</a></li>
+            <li><a href="/framework/1_problem_definition/" class="active">Step 1: Problem definition</a></li>
           
             <li><a href="/framework/2_exploration/">Step 2: Initial data exploration</a></li>
           
@@ -287,9 +287,11 @@
     
     <h1 id="page-title" class="page__title">4. Framework</h1>
     
-    <p align="center">
-  <img src="../images/framework.png" width="300" />
-</p>
+    <h2 id="step-1-problem-definition">Step 1: Problem definition</h2>
+
+<p>As in any data science problem, the first step is to define the task at hand. What kind of predictions would we like to make? Will the model interpolate or extrapolate the training data? What should the model output be (e.g.~a report, one model, an ensemble of models, a forecast, a de-noised timeseries)? Is the output conditional on other variables? For example, the time for a PhD to travel to the Engineering Department will depend on their start location, their mode of transport, the time of day and the time until their thesis submission. In particular, it is important to distinguish between different types of regression. Typically, problems are defined as in <a href="2_gp_definition.md">Section 2</a> but they could also be posed as an auto-regressive task:
+\(y_t = f(y_{t-1})+ \epsilon_t\)
+where $y$ at the variable $t-1$ is used to predict the observation of $y$ at the next $t$. This setup is common for emulation problems where the modeller is interested in replicating the behaviour of a system that is expensive or difficult to study in real life. The type of task which the modeller solves will determine how they design the model(s). For example, forecasting a single time-series along time in the future would mean we want to concentrate on incorporating long term dependencies present in the data. The task also shapes the metrics that should be used at validation and test time: do we care about modelling uncertainties, the mean or the extremes?</p>
 
   </div>
 </div>

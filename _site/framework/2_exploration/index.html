@@ -18,7 +18,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Gaussian Processes for Real-World Data">
 <meta property="og:title" content="  Framework">
-<meta property="og:url" content="http://localhost:4000/framework/">
+<meta property="og:url" content="http://localhost:4000/framework/2_exploration/">
 
 
 
@@ -36,7 +36,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/framework/">
+<link rel="canonical" href="http://localhost:4000/framework/2_exploration/">
 
 
 
@@ -228,7 +228,7 @@
           
             <li><a href="/framework/1_problem_definition/">Step 1: Problem definition</a></li>
           
-            <li><a href="/framework/2_exploration/">Step 2: Initial data exploration</a></li>
+            <li><a href="/framework/2_exploration/" class="active">Step 2: Initial data exploration</a></li>
           
             <li><a href="/framework/3_domain_knowledge/">Step 3: Domain knowledge</a></li>
           
@@ -287,9 +287,26 @@
     
     <h1 id="page-title" class="page__title">4. Framework</h1>
     
-    <p align="center">
-  <img src="../images/framework.png" width="300" />
-</p>
+    <h2 id="step-2-initial-data-exploration">Step 2: Initial data exploration</h2>
+
+<p>The next step is to perform an initial exploration of the data in order to understand whether it is suitable for GP regression. One should consider:</p>
+
+<ul>
+  <li>Number of data points $N$. For $N &gt; 10^4-10^5$, exact GP computation becomes prohibitively expensive (<a href="https://arxiv.org/abs/1502.02843">Deisenroth and Ng., 2015</a>; <a href="https://arxiv.org/abs/1903.08114">Wang et al., 2019</a>). $N &lt; 100$ may be too small especially in the case of a complex kernel with many hyperparameters which can lead to overfitting. Smaller $N$ can be mitigated using Markov Chain Monte Carlo (MCMC) estimation (<a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;ved=2ahUKEwj6mcz6_5OCAxVmUUEAHcHnBToQFnoECBYQAQ&amp;url=https%3A%2F%2Fwww.tandfonline.com%2Fdoi%2Fabs%2F10.1080%2F10705511.2016.1186549&amp;usg=AOvVaw0ZidbH7fi2dLBxWTPctuIB&amp;opi=89978449">McNeish et al., 2016</a>).</li>
+  <li>Number of input dimensions $D$. GPs are not immune to the curse of dimensionality. For $D &gt; 10$, it is hard for the modeller to form a clear image of the problem. It can therefore also be difficult to design an appropriate kernel. The number of parameters used to define the kernel will also increase, meaning it will be easier to overfit. Furthermore, if $D$ is very large $D&gt;100$, constructing the covariance matrix, which scales as $\mathcal{O}(N^2D)$, can become a computational bottleneck.</li>
+  <li>Output requirements. Are probability distributions needed for this task? If the modeller simply requires the mean output an alternative method may be more appropriate.</li>
+</ul>
+
+<p>Further considerations:</p>
+
+<ul>
+  <li>We propose a range of values for the upper limit of $N$. This is because the limit will depend on how the model is used. Higher $N$ can be used for one-off modelling rather than learning hyperparameters through repeated likelihood evaluation.</li>
+  <li>Above these limits, it is worth considering the use of a GP as a wrapper for a deep learning model (<a href="https://hess.copernicus.org/articles/26/5163/2022/hess-26-5163-2022.html">Sun et al., 2022</a>). In this case, a deep learning model can be trained on a large subset of the data. The inputs to the GP can be the output from the deep learning model or their residuals. The GP could also be used to refine the predictions for specific locations in the input feature space using held-out data. This will then yield uncertainties which can be used for uncertainty quantification, active learning, etc.. $^{\dagger}$</li>
+  <li>It may be acceptable to work in the top end of the dimension range if only a few dimensions are doing most of the predictive work. Furthermore, it is also possible to select or generate a set of lower dimensional features to feed into the model using decision trees such as Random Forests or dimensionality reduction methods such as Principal Component Analysi (<a href="https://arxiv.org/abs/2111.05040">Binois and Wycoff, 2022</a>).</li>
+  <li>For large datasets (see Step 5), two approaches are possible. In the first case, the data can be divided into chunks, independent GPs or `GP experts’ applied are then to each part and predictions are made using a (robust) Bayesian Committee Machine (<a href="https://www.dbs.ifi.lmu.de/~tresp/papers/bcm6.pdf">Tresp, 2000</a>; <a href="https://arxiv.org/abs/1502.02843">Deisenroth and Ng, 2015</a>}. In the second case and conditional on specific structure, scaling GP methods can be also applied.</li>
+</ul>
+
+<p>$^{\dagger}$ If the models are not trained jointly, the procedure will result in overfitting and the residuals will go to zero with the GP collapsing to 0 uncertainty. If the GP is fit on the training data (and not the just the held-out data) using a neural network will be more likely to result in overfitting since the model might fit the data perfectly even before applying the GP.</p>
 
   </div>
 </div>
