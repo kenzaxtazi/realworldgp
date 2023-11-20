@@ -11,6 +11,27 @@ sidebar:
     url: /related_work/
   - title: "Framework"
     url: /framework/
+    children:
+      - title: "Step 1: Problem definition"
+      url: /framework/1_problem_definition/
+      - title: "Step 2: Initial data exploration"
+      url: /framework/2_exploration/
+      - title: "Step 3: Domain knowledge"
+      url: /framework/3_domain_knowledge/
+      - title: "Step 4: Set definition"
+      url: /framework/4_set_definition/
+      - title: "Step 5: Scaling structure"
+      url: /framework/5_scaling_structure/
+      - title: "Step 6: Data transformations"
+      url: /framework/6_transformation/
+      - title: "Step 7: Kernel design"
+      url: /framework/7_kernel_design/
+      - title: "Step 8: Model iteration"
+      url: /framework/8_model_iteration/
+      - title: "Step 9: Scaling"
+      url: /framework/9_scaling/
+      - title: "Step 10: Testing"
+      url: /framework/10_testing/
   - title: "Software"
     url: /software/
   - title: "Case studies"
