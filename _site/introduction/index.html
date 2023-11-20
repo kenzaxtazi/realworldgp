@@ -1,0 +1,329 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>  Introduction - Gaussian Processes for Real-World Data</title>
+<meta name="description" content="">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Gaussian Processes for Real-World Data">
+<meta property="og:title" content="  Introduction">
+<meta property="og:url" content="http://localhost:4000/introduction/">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/introduction/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Gaussian Processes for Real-World Data Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+<!-- <script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        svg: {
+            fontCache: 'global'
+        }
+    };
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    type="text/javascript"></script> -->
+<script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        svg: {
+            fontCache: 'global'
+        }
+    };
+</script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+\(
+\newcommand{\bm}[1]{\boldsymbol{#1}}
+\)
+  </head>
+
+  <body class="layout--archive">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Gaussian Processes for Real-World Data
+          
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<!-- <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+  type="text/javascript"></script> -->
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <a href="/"><span class="nav__sub-title">About</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <a href="/introduction/"><span class="nav__sub-title">Introduction</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <a href="/gp/"><span class="nav__sub-title">Gaussian Processes</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <a href="/related_work/"><span class="nav__sub-title">Related Work</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <a href="/framework/"><span class="nav__sub-title">Framework</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <a href="/software/"><span class="nav__sub-title">Software</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <a href="/case_studies/"><span class="nav__sub-title">Case studies</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <a href="/discussion/"><span class="nav__sub-title">Discussion</span></a>
+        
+
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <div class="archive">
+    
+    <h1 id="page-title" class="page__title">1. Introduction</h1>
+    
+    <p>A Gaussian Process is a statistcal method that uses a probabilistic approach to model the relationship between variables. Unlike other methods, a Gaussian Process does not assume a specific functional form for the relationship between the variables. Instead, it models the relationship as a distribution over functions. This allows Gaussian Processes to capture complex and non-linear relationships between variables. GPs provide a relatively intuitive way of encoding domain knowledge through prior specification and kernel design, where the kernel determines the shape of the covariance matrix and therefore the shape of the predicted function. Most importantly, and unlike most machine learning algorithms, GPs give the principled measure of the uncertainty associated with each estimate. This uncertainty can be used to guide decision-making and to identify areas where additional data may be needed to improve the accuracy of the predictions. GPs are also more interpretable than deep learning methods. They typically have a small number of parameters that directly capture information about the data, like the length-scales of variation or time-scales of periodicity, unlike the weights of a neural network which have no direct physical correspondence.</p>
+
+<p>GP, often referred to as Kriging, has been used within the geostatistics community for well over half a century (<a href="https://journals.co.za/doi/abs/10.10520/AJA0038223X_5358">Krige, 1952</a>) but the the application of GPs remains far from straightforward. In its simplest form, an exact GP is computationally expensive for large datasets, scaling cubically with the number of observation datapoints. Furthermore, there are comparatively few examples of GP applications suitable for non-experts. Of these worked through examples, most are GP applications to toy dataset rather than complex real-world problems. In practice, many decisions relating to model design and implementation are developed through years of practice, reading academic literature, re-implementing experiments in code repositories and detailed knowledge of software packages run by small communities.</p>
+
+<p>This paper aims to formalise the intuition of GP practitioners. We present a framework to help modellers use and confidently apply GP regression to their own datasets. The review is not an exhaustive list of possible GP applications but offers a starting point to using ‘application grade’ methods straightforwardly with current open-source software. For this reason, many recommendations follow a simple but principled approach to dealing with the challenges of applying GPs to real world data. First we define GP regression and classification in <a href="2_gp_definition.md">Section 2</a>. Second, we relate the this work to previous research in <a href="3_related_work.md">Section 3</a>. We then present a step-by-step framework in <a href="4_framework.md">Section 4</a> and discuss commonly used software packages in <a href="5_software.md">Section 5</a>. The framework is also applied to four case studies in <a href="6_case_studies.md">Section 6</a>. Finally, we discuss the appropriateness of using GP regression in the current machine learning landscape and non-GP alternatives to solving these tasks in <a href="7_dicussion.md">Section 7</a>.</p>
+
+  </div>
+</div>
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 Gaussian Processes for Real-World Data. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

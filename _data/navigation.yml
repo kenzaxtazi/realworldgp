@@ -1,0 +1,30 @@
+# main links
+
+sidebar:
+  - title: "About"
+    url: /
+  - title: "Introduction"
+    url: /introduction/
+  - title: "Gaussian Processes"
+    url: /gp/
+  - title: "Related Work"
+    url: /related_work/
+  - title: "Framework"
+    url: /framework/
+  - title: "Software"
+    url: /software/
+  - title: "Case studies"
+    url: /case_studies/
+  - title: "Discussion"
+    url: /discussion/
+
+
+  #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  # - title: "About"
+  #   url: https://mmistakes.github.io/minimal-mistakes/about/
+  # - title: "Sample Posts"
+  #   url: /year-archive/
+  # - title: "Sample Collections"
+  #   url: /collection-archive/
+  # - title: "Sitemap"
+  #   url: /sitemap/

@@ -1,0 +1,418 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>  Framework - Gaussian Processes for Real-World Data</title>
+<meta name="description" content="">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Gaussian Processes for Real-World Data">
+<meta property="og:title" content="  Framework">
+<meta property="og:url" content="http://localhost:4000/framework/">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/framework/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Gaussian Processes for Real-World Data Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+<!-- <script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        svg: {
+            fontCache: 'global'
+        }
+    };
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    type="text/javascript"></script> -->
+<script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        svg: {
+            fontCache: 'global'
+        }
+    };
+</script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+\(
+\newcommand{\bm}[1]{\boldsymbol{#1}}
+\)
+  </head>
+
+  <body class="layout--archive">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Gaussian Processes for Real-World Data
+          
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<!-- <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+  type="text/javascript"></script> -->
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <a href="/"><span class="nav__sub-title">About</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <a href="/introduction/"><span class="nav__sub-title">Introduction</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <a href="/gp/"><span class="nav__sub-title">Gaussian Processes</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <a href="/related_work/"><span class="nav__sub-title">Related Work</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <a href="/framework/"><span class="nav__sub-title">Framework</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <a href="/software/"><span class="nav__sub-title">Software</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <a href="/case_studies/"><span class="nav__sub-title">Case studies</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <a href="/discussion/"><span class="nav__sub-title">Discussion</span></a>
+        
+
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <div class="archive">
+    
+    <h1 id="page-title" class="page__title">4. Framework</h1>
+    
+    <p align="center">
+  <img src="../images/framework.png" width="300" />
+</p>
+
+<h2 id="step-1-problem-definition">Step 1: Problem definition</h2>
+
+<p>As in any data science problem, the first step is to define the task at hand. What kind of predictions would we like to make? Will the model interpolate or extrapolate the training data? What should the model output be (e.g.~a report, one model, an ensemble of models, a forecast, a de-noised timeseries)? Is the output conditional on other variables? For example, the time for a PhD to travel to the Engineering Department will depend on their start location, their mode of transport, the time of day and the time until their thesis submission. In particular, it is important to distinguish between different types of regression. Typically, problems are defined as in <a href="2_gp_definition.md">Section 2</a> but they could also be posed as an auto-regressive task:
+\(y_t = f(y_{t-1})+ \epsilon_t\)
+where $y$ at the variable $t-1$ is used to predict the observation of $y$ at the next $t$. This setup is common for emulation problems where the modeller is interested in replicating the behaviour of a system that is expensive or difficult to study in real life. The type of task which the modeller solves will determine how they design the model(s). For example, forecasting a single time-series along time in the future would mean we want to concentrate on incorporating long term dependencies present in the data. The task also shapes the metrics that should be used at validation and test time: do we care about modelling uncertainties, the mean or the extremes?</p>
+
+<h2 id="step-2-initial-data-exploration">Step 2: Initial data exploration</h2>
+
+<p>The next step is to perform an initial exploration of the data in order to understand whether it is suitable for GP regression. One should consider:</p>
+
+<ul>
+  <li>Number of data points $N$. For $N &gt; 10^4-10^5$, exact GP computation becomes prohibitively expensive (<a href="https://arxiv.org/abs/1502.02843">Deisenroth and Ng., 2015</a>; <a href="https://arxiv.org/abs/1903.08114">Wang et al., 2019</a>). $N &lt; 100$ may be too small especially in the case of a complex kernel with many hyperparameters which can lead to overfitting. Smaller $N$ can be mitigated using Markov Chain Monte Carlo (MCMC) estimation (<a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;ved=2ahUKEwj6mcz6_5OCAxVmUUEAHcHnBToQFnoECBYQAQ&amp;url=https%3A%2F%2Fwww.tandfonline.com%2Fdoi%2Fabs%2F10.1080%2F10705511.2016.1186549&amp;usg=AOvVaw0ZidbH7fi2dLBxWTPctuIB&amp;opi=89978449">McNeish et al., 2016</a>).</li>
+  <li>Number of input dimensions $D$. GPs are not immune to the curse of dimensionality. For $D &gt; 10$, it is hard for the modeller to form a clear image of the problem. It can therefore also be difficult to design an appropriate kernel. The number of parameters used to define the kernel will also increase, meaning it will be easier to overfit. Furthermore, if $D$ is very large $D&gt;100$, constructing the covariance matrix, which scales as $\mathcal{O}(N^2D)$, can become a computational bottleneck.</li>
+  <li>Output requirements. Are probability distributions needed for this task? If the modeller simply requires the mean output an alternative method may be more appropriate.</li>
+</ul>
+
+<p>Further considerations:</p>
+
+<ul>
+  <li>We propose a range of values for the upper limit of $N$. This is because the limit will depend on how the model is used. Higher $N$ can be used for one-off modelling rather than learning hyperparameters through repeated likelihood evaluation.</li>
+  <li>Above these limits, it is worth considering the use of a GP as a wrapper for a deep learning model (<a href="https://hess.copernicus.org/articles/26/5163/2022/hess-26-5163-2022.html">Sun et al., 2022</a>). In this case, a deep learning model can be trained on a large subset of the data. The inputs to the GP can be the output from the deep learning model or their residuals. The GP could also be used to refine the predictions for specific locations in the input feature space using held-out data. This will then yield uncertainties which can be used for uncertainty quantification, active learning, etc.. $^{\dagger}$</li>
+  <li>It may be acceptable to work in the top end of the dimension range if only a few dimensions are doing most of the predictive work. Furthermore, it is also possible to select or generate a set of lower dimensional features to feed into the model using decision trees such as Random Forests or dimensionality reduction methods such as Principal Component Analysi (<a href="https://arxiv.org/abs/2111.05040">Binois and Wycoff, 2022</a>).</li>
+  <li>For large datasets (see Step 5), two approaches are possible. In the first case, the data can be divided into chunks, independent GPs or `GP experts’ applied are then to each part and predictions are made using a (robust) Bayesian Committee Machine (<a href="https://www.dbs.ifi.lmu.de/~tresp/papers/bcm6.pdf">Tresp, 2000</a>; <a href="https://arxiv.org/abs/1502.02843">Deisenroth and Ng, 2015</a>}. In the second case and conditional on specific structure, scaling GP methods can be also applied.</li>
+</ul>
+
+<p>$^{\dagger}$ If the models are not trained jointly, the procedure will result in overfitting and the residuals will go to zero with the GP collapsing to 0 uncertainty. If the GP is fit on the training data (and not the just the held-out data) using a neural network will be more likely to result in overfitting since the model might fit the data perfectly even before applying the GP.</p>
+
+<h2 id="step-3-domain-expertise">Step 3: Domain expertise</h2>
+
+<p>In this step, the modeller maps out the information that is known about the dataset, prior to a more in-depth analysis. Writing out this information in detail will be key in designing an appropriate kernel with priors and constraints in Step 7. For example, a positive constraint is necessary when modelling rainfall.</p>
+
+<h2 id="step-4-training-validation-and-test-set-definition">Step 4: Training, validation and test set definition</h2>
+
+<p>A held out dataset allows the modeller to check whether they are under or overfitting, and to give some indication of the performance they would get on `real’ unseen data. The separation of the data should reflect the goals and the performance they want to measure in Step 1, and information from Step 3. Ideally the dataset should be separated into three groups: a training set, a validation set, and a test set which will not be iterated over. In many cases, the data is used in real-world is not i.i.d., it is dependent and  correlated, and come from heterogeneous sources and samplings regimes. If the effective number of data points (the number of independent samples that would be needed to produce the same information content as the given sample) is fairly small, then a cross-validation scheme is strongly recommended to assess the stability and predictability of the model (<a href="https://arxiv.org/abs/1901.08152">Yu and Kumbier, 2020</a>).</p>
+
+<h2 id="step-5-scaling-structures">Step 5: Scaling structures</h2>
+
+<p>When working with a large dataset, the modeller should also analyse the training data to find structure that may lead to the application of scaling methods. Three cases and how to identify them are discussed below.</p>
+
+<ul>
+  <li><strong>Case 1</strong>: Oversampled functions. An oversampled function is sampled more frequently than is required to capture its underlying structure and variation. In the case of a periodic function this would be more than the Nyquist frequency. In this situation, the modeller can use sparse GP regression with variational inference of inducing points (<a href="https://proceedings.mlr.press/v5/titsias09a.html">Titsias, 2009</a>). Many GP libraries, such <a href="https://gpflow.org"><code class="language-plaintext highlighter-rouge">GPflow</code></a> or <a href="https://gpytorch.ai"><code class="language-plaintext highlighter-rouge">GPyTorch</code></a>, offer built-in functions to perform this approximation.</li>
+  <li><strong>Case 2</strong>: Timeseries data. For timeseries data, the GP can be mapped to a Stochastic Differential Equation (SDE) (<a href="https://ieeexplore.ieee.org/document/5589113">Hartikainen, 2010</a>). This approximation has a linear cost in the number of time points and works well in many situations. However the mapping between the covariance matrix and the SDE can be expensive, sometimes more expensive than solving SDE itself. <a href="https://github.com/JuliaGaussianProcesses/TemporalGPs.jl"><code class="language-plaintext highlighter-rouge">TemporalGPs.jl</code></a>, a package Julia, provides a framework to apply this method.</li>
+  <li>
+    <p><strong>Case 3</strong>: Kronecker product structure. For such dataset with the following kernel structure, such as gridded data:</p>
+
+\[\text{Cov}\biggl(\begin{bmatrix} x_1 \\ x_2  \end{bmatrix} \begin{bmatrix} x_1^{\prime} \\ x_2^{\prime}\end{bmatrix} \biggl)=\text{Cov}(x_1,x_1^{\prime} )\otimes \text{Cov}(x_2,x_2^{\prime}),\]
+
+    <p>the Kronecker identity can be used to invert the matrices in a piecewise fashion (<a href="https://mlg.eng.cam.ac.uk/pub/pdf/Saa11.pdf">Saatcci et al., 2012</a>). This trick is used in the Structured Kernel interpolation (SKI) (<a href="https://proceedings.mlr.press/v37/wilson15.html">Wilson and Nickish, 2015</a>). Both SKI and SKIP are implementable in <a href="https://gpytorch.ai"><code class="language-plaintext highlighter-rouge">GPyTorch</code></a>.</p>
+  </li>
+</ul>
+
+<p>If no structure is apparent, a baseline that is hard to beat is to the divide the data into smaller datasets, as previously mentioned. This can be done naively by separating data chronologically or into tiles. However, it can be useful to make use of clustering algorithms, such as k-means or k-nearest neighbours, to group features that exhibit similar properties.</p>
+
+<h2 id="step-6-data-transformations">Step 6: Data transformations</h2>
+
+<p>To improve inference, input features should generally be z-scored, i.e., subtracting the mean and dividing by the standard deviation. This means that most values should lie between -1 and 1. Exact GPs also expect the posterior distribution to be Gaussian. Applying a transformation to the target data, i.e.~the marginal likelihood, can help achieve this. Transforms also can help avoid unphysical predictions such as negative values and highlight the areas of the distribution we would like to predict more accurately. Some common transformations are logarithm and power functions such as the Box-Cox transformation (<a href="https://rss.onlinelibrary.wiley.com/doi/10.1111/j.2517-6161.1964.tb00553.x">Box et al, 1964</a>). These transformation will constrain values to be non-zero but also reduce the weighting of the extreme values. Transformations also have a significant effect on the confidence interval of the model. The modeller should check the training data residuals and samples iterating over the chosen transform if necessary. It can be helpful to check if the transformation improves baselines such as linear regression or k-nearest neighbour models.</p>
+
+<h2 id="step-7-kernel-design">Step 7: Kernel design</h2>
+
+<p>In this step, the modeller explores the dataset in order to design the kernel function. To compose a kernel, the following characteristics of the target variable should be considered: smoothness, lengthscales, periodicity, outliers and tails, asymmetry, and stationarity. Tools such as first and second order statistics, scatter plots (with low dimensional projections), covariance and correlation matrices, autocorrelation plots, power density spectrum, and k-Nearest Neighbour analysis can be used to find these properties. The modeller should exercise their common sense when applying these tests keeping in mind the task they are trying to solve, as defined in Step 1. They should also view this exercise as hypothesis testing and ascertain if the characteristics of the dataset match the domain knowledge, outlined in Step 3, and if not, why.</p>
+
+<p>This step is also important for inference time. The covariance is inverted analytically and, in most cases, Cholesky decomposition is used. However, this method requires the covariance matrix is Hermitian positive definite. This means the decomposition will fail if the one of the input dimensions is linearly related to another or a combination of other inputs. In practice, many GP models are set to have a zero mean function $\mu(\bm{x})$. However, the stability of inference can also be improved by modelling the most obvious features of the dataset through $\mu(\bm{x})$ the rather than $k(\bm{x}-\bm{x}^{\prime})$.</p>
+
+<p>Now that we have a clear understanding of the data. We can design the kernel function through `kernel composition’. The kernel can be built by combining standard operators and base kernel functions \citep{duvenaud2014construction}. Adding is equivalent to applying the logical operator ‘OR’, i.e.~changes in the amplitude can be explained by either term in the sum. For example, the resulting kernel will have high value if either of the two base kernels have a high value. Multiplying is similar to an ‘AND’ operation, i.e.~changes in the amplitude are explained by both term in the multiplication. For example, the kernel will have high value if both base kernels have a high value. It’s worth noting that multiplying kernels can result in a lower-dimensional representation of the data, simplify eigenvalue decomposition, result in a sparse matrix, and allow for pre-computation, thus making this procedure a computationally efficient way to combine with kernels. The design of the kernel will first and foremost affect the smoothness of the samples. The modeller can enforce this by choosing the smoothness of the mean and covariance functions. This is in particular useful for modeling data with underlying structures, such as financial time series data or image data.</p>
+
+<p>If the model does not initially converge close the lengthscales values determined previously. They can be initialised manually. If this still does not change where the model converges, strong guidance can be applied through constraints and priors. In real-world cases, including such specifications are not uncommon to achieve the desired results. These include:</p>
+
+<ul>
+  <li><strong>Boundary constraints</strong>. The modeller enforce boundary constraints on the model parameters, such as bounds on the mean function parameters or variance and lengthscale of the kernel function. This can be useful when modeling physical processes that have known limits or constraints. In practice, using constraints may be difficult. If they do not match the observations, the model can break down. It is usually better to have small and positive priors (see next point).</li>
+  <li><strong>Bayesian priors</strong>. The model incorporate prior knowledge about the parameters of the model using priors distributions. For example, a Gaussian prior can be placed on the parameters of the covariance function to encourage the model to converge to a particular solution.</li>
+  <li><strong>Constraints on the covariance function</strong>. The modeller can enforce constraints on the covariance function, such as stationarity or monotonicity. These constraints can help to ensure that the model has physically meaningful properties.</li>
+</ul>
+
+<p>Note that kernels with many hyperparameters will be more likely to overfit the data. Furthermore, recent literature suggests that even when a large number of terms are used, only a few parameters drive the outputs of the model after inference (<a href="https://proceedings.mlr.press/v162/lu22b.html">Lu, Boukouvalas and Hensman, 2022</a>). Regularisation techniques can be applied to the kernel function to limit overfitting (<a href="https://www.jmlr.org/papers/v8/cawley07a.html">Cawley and Talbot, 2007</a>) but are usually quite involved to put in place. %The kernels could also be modified put more emphasis on different parts of the marginal distribution such as extremes.</p>
+
+<h2 id="step-8-model-iteration">Step 8: Model iteration</h2>
+
+<p>The modeller should start by setting up some simple non-GP baseline such as k-NN or linear regression. They should then build the kernel iteratively, trying the most important dimensions first and check the physical consistency of the samples, the structure of residuals, the posterior predictive likelihood scores such as the marginal log likelihood, the mean log loss and Bayesian Information Criterion. The bias, Root Mean Square Error (RMSE) and Mean Absolute Error should also be evaluated. The checks should be repeated at for each iteration on both the training and validation sets. The modeller should keep iterating, until the scores start to stagnate or signs of overfitting are observed. If they are using using the GP for interpolation, this can simply be done by comparing the metrics such as RMSE and log-likelihood for the training and validation sets. However if extrapolation is the goal, it is normal for the model to perform worse away from the training distribution. In this case, it is useful to look at the GP samples. Are they sensible for both the training and validation sets?</p>
+
+<p>GP samples can also be used as `synthetic data’ to check the validity of the model and training procedure. The synthetic data is generated from the model samples. This fake data is similar to real data, but where ground truth parameter values are known. The samples can be fit using another GP. If the specified model is doing a good job, the modeller should be able to recover the original covariance matrix of the training data. If the results of these tests are unsatisfactory, return to Step 6 and try a new transformation design or set of constraints.</p>
+
+<p>If after performing Steps 6 to 8, there is no significant improvement, more involved ‘research grade’ GP methods such as a Deep Gaussian Process (<a href="https://proceedings.mlr.press/v31/damianou13a.html">Damianou and Lawrence, 2013</a>) or a Gaussian Process Latent Variable Model (<a href="https://proceedings.mlr.press/v9/titsias10a">Titsias and Lawrence, 2010</a>) may be more suitable for the problem.</p>
+
+<h2 id="step-9-scaling">Step 9: Scaling</h2>
+
+<p>If the modeller is using a large dataset, they can now apply their findings from Step 5. In particular, they will either apply one of the previously discussed scaling methods or apply independent GPs to chunked data to make predictions using a Bayesian Committee Machine. This can be implemented using the <a href="https://github.com/NicolasDurrande/guepard"><code class="language-plaintext highlighter-rouge">guepard</code></a> library.</p>
+
+<h2 id="step-10-testing">Step 10: Testing</h2>
+
+<p>Finally check the model on the test data using the same metrics as outlined in Step 8. These are the values that should be quoted as the results.</p>
+
+  </div>
+</div>
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 Gaussian Processes for Real-World Data. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

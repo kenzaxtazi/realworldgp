@@ -1,0 +1,480 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>  Gaussian Processes - Gaussian Processes for Real-World Data</title>
+<meta name="description" content="">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Gaussian Processes for Real-World Data">
+<meta property="og:title" content="  Gaussian Processes">
+<meta property="og:url" content="http://localhost:4000/gp/">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/gp/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Gaussian Processes for Real-World Data Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+<!-- <script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        svg: {
+            fontCache: 'global'
+        }
+    };
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    type="text/javascript"></script> -->
+<script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        svg: {
+            fontCache: 'global'
+        }
+    };
+</script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+
+\(
+\newcommand{\bm}[1]{\boldsymbol{#1}}
+\)
+  </head>
+
+  <body class="layout--archive">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Gaussian Processes for Real-World Data
+          
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<!-- <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    },
+    svg: {
+      fontCache: 'global'
+    }
+  };
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+  type="text/javascript"></script> -->
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <a href="/"><span class="nav__sub-title">About</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <a href="/introduction/"><span class="nav__sub-title">Introduction</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <a href="/gp/"><span class="nav__sub-title">Gaussian Processes</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <a href="/related_work/"><span class="nav__sub-title">Related Work</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <a href="/framework/"><span class="nav__sub-title">Framework</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <a href="/software/"><span class="nav__sub-title">Software</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <a href="/case_studies/"><span class="nav__sub-title">Case studies</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+          <a href="/discussion/"><span class="nav__sub-title">Discussion</span></a>
+        
+
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <div class="archive">
+    
+    <h1 id="page-title" class="page__title"> 2. Gaussian Processes</h1>
+    
+    <h2 id="21-definitions">2.1. Definitions</h2>
+
+<p>This section aims provide a brief overview of GPs and to set out the notation for the following sections. For a more detailed and/or intuitive introduction to GPs, we refer the reader to the following resources:</p>
+
+<ul>
+  <li><a href="https://distill.pub/2019/visual-exploration-gaussian-processes/">A Visual Exploration of Gaussian Processes</a> by Jochen Görtler, Rebecca Kehlbeck and Oliver Deussen</li>
+  <li><a href="https://gaussianprocess.org/gpml/">Gaussian Proccesses for Machine Learning</a> by Rasmussen and Williams (2006).</li>
+  <li><a href="http://www.infinitecuriosity.org/vizgp/">Interactive Gaussian Process Visualization</a> by ST John</li>
+</ul>
+
+<h3 id="211-gp-regression">2.1.1. GP regression</h3>
+
+<p>Consider the set of observations comprising input-output pairs ${\bm{x}_i, y_i}$ with $i=1,\dots, N$, $\bm{x}_i \in \mathbb{R}^D$, and $y_i \in \mathbb{R}$. These observations are generated by a function $f$, describing the relationship between inputs and outputs, and modulated by a noise term that accounts for the uncertainty in the observed data:</p>
+
+\[y_i = f(\bm{x}_i) + \epsilon_{i},\]
+
+<p>where $\epsilon_{i}$ is assumed to be distributed normally as $\mathcal{N}(0, \sigma_n^{2})$ with standard deviation $\sigma_n$. The latent function $f$ can be modelled with a Gaussian Process (GP) (<a href="https://gaussianprocess.org/gpml/">Rasmussen and William, 2006</a>) . A GP is a stochastic process where any finite collection of its random variables is distributed according to a multivariate normal distribution. Generalising to infinity, a GP can be viewed as a distribution over functions. A GP is defined by a mean function $\mu(\bm{x})$ and covariance or kernel function $k(\bm{x}, \bm{x}^{\prime})$:</p>
+
+\[f(\cdot) \sim \mathcal{GP}( \mu(\bm{x}; \bm{\theta}_\mu), k(\bm{x}, \bm{x}^{\prime}; \bm{\theta}_k))\]
+
+<p>where both mean and kernel function typically depend on hyperparameters $\bm{\theta}_\mu$ and $\bm{\theta}_k $.</p>
+
+<p>A standard method for learning the kernel hyperparameters is to maximise the marginal likelihood, the probability density of the observations given the hyperparameters. The marginal likelihood is computed by integrating over the values of $f$. Collecting inputs and outputs into $\bm{X} = (\bm{x}_i)_{i=1}^N$ and $\bm{Y} = (y_i)_{i=1}^N$, the logarithm of the marginal likelihood is given by</p>
+
+\[\log (p(\bm{Y} \vert \bm{X}, \bm{\theta})) = -\frac{1}{2} (\bm{Y} - \bm{\mu})^{\top} (\bm{K}+\sigma_{n}^2 \bm{I})^{-1} (\bm{Y}-\bm{\mu})\]
+
+\[- \frac{1}{2} \log (\vert \bm{K} + \sigma_{n}^{2} \bm{I} \vert) - \frac{N}{2} \log (2 \pi) ,\]
+
+<p>where the mean vector $\bm{\mu}$ collects $(\mu(\bm{x}_i))_{i=1}^N$ and the kernel matrix $\bm{K}$ is constructed from $k(\bm{x}_i, \bm{x}_j)$ evaluated on all pairs $i,j = 1,\dots,N$.
+The hyperparameters of mean and kernel function and of the likelihood ($\sigma_n^2$) are collected in the hyperparameter vector $\bm{\theta}$.</p>
+
+<p>Maximising the log marginal likelihood w.r.t $\bm{\theta}$ then gives the Maximum Likelihood Estimate for the hyperparameter values. Assuming a Gaussian likelihood for $\bm{\epsilon}$, the posterior predictive distribution is tractable and can be used to calculate predictions for a new output $f_{*}$, given a new input $\bm{x}_{*}$, as</p>
+
+\[p(f_*\vert \bm{Y},\bm{X},\bm{x}_*) = \mathcal{N}(f_*\vert \mu_*(\bm{x}_*), \sigma_{*}^2 (\bm{x}_*)).\]
+
+<p>Predictions are computed using the predictive mean $\mu_{*}$, while the uncertainty associated with these predictions is quantified through the predictive variance $\sigma_{*}^2$:</p>
+
+\[\mu_*(\bm{x}_*) = \bm{k}_{*n}^{\top} (\bm{K}+ \sigma_n^2 \bm{I})^{-1} (\bm{y} - \bm{\mu}) + \mu(\bm{x}_*),\]
+
+\[\sigma_{*}^2 (\bm{x}_*) = k_{**} - \bm{k}_{*n}^{\top} (\bm{K} + \sigma_n^2 \bm{I})^{-1} \bm{k}_{*n},\]
+
+<p>where $\bm{k}_{*n} = [k(\bm{x}_*, \bm{x}_1), \dots, k(\bm{x}_*, \bm{x}_n)]^{\top}$ and $k_{**} = k(\bm{x}_*,\bm{x}_*)$.</p>
+
+<h3 id="212-multi-task-gp-regression">2.1.2. Multi-task GP regression</h3>
+
+<p>Multi-task GP regression is a generalisation of GP regression where the observations for multiple dimensions are generated by a GP. The first multitask GP model was introduced by <a href="https://papers.nips.cc/paper/2007/file/8e9b3b5d8e8e0d0e5eabf3d0f3e9a3a3-Paper.pdf">Bonilla et al. (2008)</a>. We will focus on this implementation which is well established in GP libraries, although other approaches to this problem exist.</p>
+
+<p>More formally, given a set $X$ of $N$ distinct inputs $x_1 , . . . , x_N$ we define the complete set of responses for $M$ tasks as $y=(y_{11},…,y_{N1},…,y_{12},…,y_{N2},…,y_{1M},…,y_{NM})^T$, where $y_{il}$ is the response for the $l$th task on the $i$th input $x_i$. Let us also denote the $N × M$ matrix $Y$ such that $\bm{y} = \text{vec} \ Y$ .</p>
+
+<p>Given a set of observations $\bm{y}_o$, which is a subset of $\bm{y}$, we want to predict some of the unobserved response-values $\bm{y}_u$ at some input locations for certain tasks. We approach this problem by placing a GP prior over the latent functions ${f_l}$ so that we directly induce correlations between tasks. Assuming that the GPs have zero mean we set:</p>
+
+\[⟨f_l(\bm{x})f_k(\bm{x}')⟩ = K^{f}_{lk} k^x(\bm{x},\bm{x}') \quad y_{il} ∼ \mathcal{N}(f_l(x_i),σ_{l}^2),\]
+
+<p>where $K_f$ is a positive semi-definite (PSD) matrix that specifies the inter-task similarities, $k_x$ is a covariance function over inputs, and $σ_l^2$ is the noise variance for the lth task. Below we focus on stationary covariance functions kx; hence, to avoid redundancy in the parametrization, we further let kx be only a correlation function (i.e. it is constrained to have unit variance), since the variance can be explained fully by $K_f$ .</p>
+
+<h3 id="213-gp-classification">2.1.3. GP classification</h3>
+
+<p>For binary classification, we have a discrete target variable $t∈0,1$ that follows a Bernoulli distribution. We are interested in the probability $p(t=1 \vert a)=σ(a)$ where $σ$ is the logistic sigmoid function taking logit $a∈ℝ$ as argument. $p(t=0 \vert a)$ is given by $1−p(t=1 \vert a)$. Given observed targets $\bm{t}$ at points $\bm{X}$, our goal is to predict target $t_∗$ at point $\bm{x}_*$ using the predictive distribution $p(t_*=1 \vert \bm{x}_*,\bm{X},\bm{t})$. Making the conditioning on input variables implicit, the notation of the predictive distribution simplifies to $p(t_*=1∣\bm{t})$.</p>
+
+<p>The predictive distribution is given by:</p>
+
+\[p(t_*=1 \vert \bm{t})=∫p(t_*=1 \vert a_*)p(a_∗ \vert \bm{t})da_∗\]
+
+<p>This integral is analytically intractable. Two approximation are needed:</p>
+
+<ol>
+  <li>First, $p(a_* \vert \bm{t})$ must be approximated with a Gaussian distribution.</li>
+  <li>Second, $p(t_*=1 \vert a_∗)=σ(a_*)$ must be approximated with the inverse probit function $Φ(a_*)$</li>
+</ol>
+
+<p>Let’s start with $p(a_* \vert t)$ which can be defined as:</p>
+
+\[p(a_∗\vert \bm{t})=∫p(a_∗\vert\bm{a})p(\bm{a} \vert \bm{t})d\bm{a}\]
+
+<p>The first term inside the integral, $p(\bm{a}_* \vert \bm{a})$, is a Gaussian distribution that can be obtained using a GP for regression. The joint distribution over logits $p(\bm{a}, a_* \vert \bm{X},\bm{x}_*)$ can be turned into a conditional distribution $p(a_*\vert \bm{x}_*,\bm{X},\bm{a})$. Making the conditioning on input variables implicit gives $p(a_*\vert\bm{a})$.</p>
+
+<p>Using the Laplace approximation, the posterior distribution $p(a∣t)$ can be approximated with a Gaussian distribution $q(a)$:</p>
+
+\[q(\bm{a})=\mathcal{N} (\bm{a}\vert\hat{\bm{a}} ,\bm{H}^{−1})\]
+
+<p>where $\bm{H} = \bm{W} +(\bm{K} + \sigma_a^2 \bm{I})^{−1}$. $W$ is a diagonal matrix with elements $σ(a_n)(1−σ(a_n))$ with an being the elements of $\bm{a}$. Written in vector notation the diagonal is $\bm{σ}(1−\bm{σ})$.</p>
+
+<p>The mean $\hat{\bm{a}}$ can be obtained iteratively with the following update equation:</p>
+
+\[a^{\text{new}} = \bm{K}_a(\bm{I}+\bm{W}\bm{K}_a)−1(\bm{t}−\bm{σ}+W \bm{a})\]
+
+<p>where \(\bm{K}_a = \bm{K} + \sigma_a^2 \bm{I}\). At convergence $\hat{\bm{a}} = \bm{a}^\text{new}$.</p>
+
+<p>With two Gaussians inside the integral, the result is also a Gaussian and can be obtained analytically. The Gaussian approximation of $p(a_* \vert t)$ is therefore given by:</p>
+
+\[p(a_*\vert \bm{t})≈\mathcal{N}(a_* \vert μ_{a∗},σ^2_{a∗})\]
+
+<p>with</p>
+
+\[μ_{a∗}=\bm{k}^\top_∗(\bm{t}−\bm{σ})\]
+
+\[σ^2_{a∗} = k_{∗∗}−\bm{k}^\top_∗(\bm{W}^{-1}+\bm{K}_a)^{−1} \bm{k}_∗\]
+
+<p>Finally, we approximate $p(t_<em>=1 \vert a_</em>)$ with the inverse probit function $Φ(a_*)$ so that the predictive distribution can be approximated with:</p>
+
+\[p(t_∗=1 \vert \bm{t})≈ σ(μ_{a∗}(1+ πσ^2_{a*}/8)^{−1/2})\]
+
+<hr />
+
+<h2 id="22-strengths-and-limitations">2.2. Strengths and limitations</h2>
+
+<h3 id="221-strengths">2.2.1. Strengths</h3>
+
+<p>GPs have a number of advantages that can make them a judicious choice over other supervised machine learning algorithms. A GP provides:</p>
+
+<ul>
+  <li>
+    <p><strong>Well-calibrated uncertainty estimates</strong>. Assuming the specified model is appropriate, a GP ‘knows when it does not know’, increasing the uncertainty away from the training distribution. This is useful for determining the likelihood of extreme events and improving decision making.</p>
+  </li>
+  <li>
+    <p><strong>Machine learning for correlated datasets</strong>. In many cases such as geospatial problems, neighbouring observations are usually not independent and identically distributed (i.i.d.) but closely correlated to one another (<a href="https://arxiv.org/abs/2209.04947">Lalchand et al., 2022</a>; <a href="https://royalsocietypublishing.org/doi/10.1098/rsif.2017.0520">Bhatt et al.,2017</a>).</p>
+  </li>
+  <li>
+    <p><strong>More interpretable machine learning</strong>. Although not as interpretable as simpler methods such as conventional linear regression or random forests, GP covariance functions specify high-level properties of the generated functions which can be conveyed in natural language (<a href="https://ojs.aaai.org/index.php/AAAI/article/view/8904">Lloyd et al., 2014</a>). Compared to deep learning methods, with thousands to trillions of learnable parameters which cannot obviously be linked with given physical features of the model predictions, GPs can be a more trustworthy alternative to the model end users.</p>
+  </li>
+  <li>
+    <p><strong>Data-efficient machine learning</strong>. A GP is a non-parametric Bayesian method which provides both model expressivity while avoiding overfitting. GPs adapt to different datasets and handle data efficiently without requiring a predefined model structure. Furthermore, once a GP model is trained, new data points can be incorporated efficiently without retraining (<a href="https://proceedings.neurips.cc/paper/2017/hash/f31b20466ae89669f9741e047487eb37-Abstract.html">Bui et al., 2017</a>; <a href="https://proceedings.mlr.press/v202/chang23a.html">Chang et al., 2023</a>).</p>
+  </li>
+  <li>
+    <p><strong>Machine learning systems</strong>. GP regression is unlikely to fail and can be used reliably as a subpart of a bigger machine learning system, for example in probabilistic numerics (<a href="https://www.probabilistic-numerics.org/textbooks/">Hennig et al., 2022</a>), reinforcement learning (<a href="https://icml.cc/Conferences/2005/proceedings/papers/026_Reinforcement_EngelEtAl.pdf">Engel  et al., 2005</a>) and automated statisticians (see <a href="/framework/3_related_work.md">Section</a>).</p>
+  </li>
+</ul>
+
+<h3 id="222-limitations">2.2.2. Limitations</h3>
+
+<p>It is also important to acknowledge the limitations of GPs. They struggle with:</p>
+
+<ul>
+  <li>
+    <p><strong>Large numbers of datapoints</strong>. Training on datasets with $N \gtrsim 10^{4}$ becomes prohibitive (<a href="https://arxiv.org/abs/1502.02843">Deisenroth and Ng., 2015</a>; <a href="https://arxiv.org/abs/1903.08114">Wang et al., 2019</a>). The computational complexity of covariance matrix inversion in the calculation of the log marginal likelihood and the predictions scales as $\mathcal{O}(N^3)$ ($\mathcal{O}(N^{3}M)$ for multitask regression). The memory for storing the matrices scales as $\mathcal{O}(N^2)$.</p>
+  </li>
+  <li>
+    <p><strong>High-dimensional input spaces</strong>. raining on datasets with $D \gtrsim 100$ becomes difficult due to the need to compute pair-wise elements of covariance function which scales as $\mathcal{O}(DN^2)$, e.g. they are not best-suited to images (<a href="https://papers.nips.cc/paper_files/paper/2017/hash/1c54985e4f95b7819ca0357c0cb9a09f-Abstract.html">van der Wilk et al., 2017</a>).</p>
+  </li>
+  <li>
+    <p><strong>Complex covariance functions</strong>. In situations which require covariance functions with many parameters that must be learned from the data, the covariance function will be hard to design and the model may overfit (<a href="https://proceedings.mlr.press/v161/ober21a.html">Ober et al., 2021</a>).</p>
+  </li>
+  <li>
+    <p><strong>Non-Gaussian distributions</strong>. While Gaussian prior and likelihood function assumptions are quite common in classical scientific computing techniques, modern models, such as deep generative models, are increasingly moving towards modelling the target prior/posterior distributions using more flexible distributions parameterised by deep neural networks, like normalising flows (<a href="https://arxiv.org/abs/1802.07535">Korshunova et al., 2018</a>; <a href="https://arxiv.org/abs/1810.11738">Casale et al., 2018</a>). These models avoid explicit handcrafted assumptions about the data or model and enable less biased Bayesian inference.</p>
+  </li>
+  <li>
+    <p><strong>Misspecified model</strong>. Here, misspecification refers to our belief, or lack thereof, in the proposed model to accurately represent the underlying patterns present in the data. In this case it is hard for the model to generate accurate results. For example, an inappropriate kernel function could be chosen for the covariance matrix (see Figure 2.1). Poorly specified models will not only produce a more inaccurate mean posterior distribution but also inaccurate confidence intervals and inappropriate samples (<a href="https://arxiv.org/abs/cond-mat/0106475">Sollich,2001</a>, <a href="https://link.springer.com/chapter/10.1007/11559887_12">Sollich, 2004</a>, <a href="https://iopscience.iop.org/article/10.1088/0266-5611/30/11/114007">Brynjarsdottir et al., 2014</a>).</p>
+  </li>
+</ul>
+
+<p align="center">
+  <img src="../images/matern_misspecified.png" width="500" />
+  <img src="../images/periodic_misspecified.png" width="500" />
+</p>
+
+<p><em>Figure 2.1: GP fit for 10 data points sampled from the periodic function $\sin^2(x - 2.5)$ using a Matérn 3/2 kernel (top) and a periodic kernel (bottom). Although the mean posterior distributions are similar, the shape of the samples and confidence intervals are different. Adapted from <a href="https://scikit-learn.org/stable/modules/gaussian_process.html">Scikit Learn, 2023</a>.</em></p>
+
+  </div>
+</div>
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 Gaussian Processes for Real-World Data. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
