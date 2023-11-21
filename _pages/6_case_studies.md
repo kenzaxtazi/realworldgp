@@ -16,7 +16,7 @@ The following section describes implementation details of four case studies. The
 The framework is applied to glacier elevation change over Greenland using data derived from ICESat and ICESat-2 satellites. In this regression problem, we would like to estimate glacier elevation change at unsampled locations. This case study has direct applications to estimating sea level rise. Ocean distance, topographic elevation, slope, aspect, surface glacier velocity, and spatial coordinates - are used as inputs $D=7$. The dataset is also large with $ N=5 \times 10^5$. We compare the framework with a pre-existing application of GPs. The model is evaluated with an emphasis on capturing extremes. We compare the framework with a pre-existing application of GPs to this problem by [Gardner et al. (2019)](<https://ui.adsabs.harvard.edu/abs/2019AGUFM.C41A..08G>).
 
 [Part I: Problem definition](../notebooks/glaciers_gpframe_s1s4.html)\
-[Part II: Data exploration]() \
+[Part II: Data exploration](../notebooks/glaciers_gpframe_s5s7.html) \
 [Part III: Model iteration]() \
 [Part IV: Scaling and testing]()
 
