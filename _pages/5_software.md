@@ -9,8 +9,6 @@ redirect_from:
 - /software.html
 ---
 
-__This section needs a more content and systemic analysis of the different options. A table would be nice too. Please feedback if you think I am missing any obvious software packages here.__
-
 In the last few years, a number of packages to perform GP regression and classification have been developed in Python and Julia. In this section, we discuss the advantages and drawbacks of seven open-source packages. The packages are compared using five characteristics: beginner friendliness, customisability, community, scalability, and intuitiveness. We focus mainly on how the software can be applied to exact inference but also discuss possible extensions to approximations methods.
 
 [`scikit-learn`](https://scikit-learn.org/stable/index) is a comprehensive Python library for predictive data analysis. It provides a number of simple tools for exact GP regression and classification, and is a good place for GP novices to start. The library comes with lots of documentation and large community.
