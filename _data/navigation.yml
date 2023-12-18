@@ -20,10 +20,10 @@ sidebar:
         url: /framework/3_domain_knowledge/
       - title: "Step 4: Set definition"
         url: /framework/4_set_definition/
-      - title: "Step 5: Scaling structure"
-        url: /framework/5_scaling_structure/
+      - title: "Step 5: Scaling structures"
+        url: /framework/5_scaling_structures/
       - title: "Step 6: Data transformations"
-        url: /framework/6_transformation/
+        url: /framework/6_transformations/
       - title: "Step 7: Kernel design"
         url: /framework/7_kernel_design/
       - title: "Step 8: Model iteration"

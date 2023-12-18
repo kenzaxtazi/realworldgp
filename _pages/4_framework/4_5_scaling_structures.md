@@ -1,12 +1,12 @@
 ---
-permalink: /framework/5_scaling_sctructures/
+permalink: /framework/5_scaling_structures/
 title: "4. Framework"
 layout: archive
 sidebar:
   nav: "sidebar"
 redirect_from:
-- /framework/5_scaling_sctructures
-- /framework/5_scaling_sctructures.html
+- /framework/5_scaling_structures
+- /framework/5_scaling_structures.html
 ---
 
 ## Step 5: Scaling structures
