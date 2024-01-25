@@ -17,4 +17,4 @@ Gaussian Processes (GPs) offer an attractive method for regression over small, s
 
 Kenza Tazi, Jihao Andreas Lin, Ross Viljoen, Alex Gardner, S. T. John, Hong Ge, and Richard E. Turner. "Beyond Intuition, a Framework for Applying GPs to Real-World Data." In ICML 2023 Workshop on Structured Probabilistic Inference & Generative Modeling. 2023. [Paper](https://arxiv.org/abs/2307.03093)
 
-Kenza Tazi, Jihao Andreas Lin, Lisanne Blok, Alex Gardner, S. T. John, Hong Ge, and Richard E. Turner. (2023), Towards more interpretable and robust geospatial modelling with Gaussian Processes. Abstract (IN11C-0563) presented at AGU23, 11-15 Dec.
+Kenza Tazi, Jihao Andreas Lin, Lisanne Blok, Alex Gardner, S. T. John, Hong Ge, and Richard E. Turner. (2023), Towards more interpretable and robust geospatial modelling with Gaussian Processes (IN11C-0563). Presented at AGU23, 11-15 Dec. [Abstract](https://agu.confex.com/agu/fm23/meetingapp.cgi/Paper/1240204)
